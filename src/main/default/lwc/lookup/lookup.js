@@ -20,6 +20,7 @@ export default class Lookup extends LightningElement {
     cleanSearchTerm;
     blurTimeout;
     searchThrottlingTimeout;
+ 
 
     // EXPOSED FUNCTIONS
 
