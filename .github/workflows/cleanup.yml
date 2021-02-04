@@ -12,6 +12,8 @@ jobs:
   auto-delete:
     runs-on: ubuntu-latest
     steps:
+      - run: echo headRef ${{ github.head_ref }}.
+        shell: bash
       - name: delete branch
         uses: SvanBoxel/delete-merged-branch@main
         with: 
