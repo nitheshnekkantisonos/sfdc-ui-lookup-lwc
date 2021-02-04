@@ -1,0 +1,15 @@
+on:
+  pull_request:
+    branches:
+    - "truckin/release"
+    types: [closed]
+
+jobs:
+  auto-delete:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: delete branch
+        uses: SvanBoxel/delete-merged-branch@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
