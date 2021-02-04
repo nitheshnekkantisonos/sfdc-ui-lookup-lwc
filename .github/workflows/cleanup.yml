@@ -9,11 +9,10 @@ on:
     types: [closed]
 
 jobs:
-  auto-delete:
+  auto_delete:
     runs-on: ubuntu-latest
     steps:
-      - run: echo headRef ${{ github.head_ref }}.
-        shell: bash
+      - run: echo "source branch => ${{ github.head_ref }}"
       - name: delete branch
         uses: SvanBoxel/delete-merged-branch@main
         with: 
